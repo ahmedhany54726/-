@@ -54,7 +54,7 @@
 /* ===== موبايل ===== */
 @media (max-width: 768px) {
   .links nav {
-    font-size: 18px;
+    font-size: 10px;
     flex-direction: column; /* اللوجو فوق */
     align-items: center;
   }
