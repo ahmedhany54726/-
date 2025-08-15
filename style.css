@@ -1,0 +1,92 @@
+.links nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: #f8f8f8;
+  font-family: Arial, sans-serif;
+}
+
+/* logo */
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #1f2937;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+/* nav menu */
+.nav-menu {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-menu li a {
+  text-decoration: none;
+  font-size: 18px;
+  color: #1f2937;
+  padding: 5px;
+  text-transform: uppercase;
+  transition: 0.3s;
+}
+
+.nav-menu li a:hover {
+  color: gray;
+}
+
+/* burger icon */
+.burger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.close-btn {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* ===== موبايل ===== */
+@media (max-width: 768px) {
+  .links nav {
+    font-size: 18px;
+    flex-direction: column; /* اللوجو فوق */
+    align-items: center;
+  }
+
+  .burger {
+    display: block; /* يظهر في الموبايل */
+    margin-top: 10px;
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: 250px;
+    background-color: #f8f8f8;
+    flex-direction: column;
+    justify-content: center; /* توسيط عمودي */
+    align-items: center;     /* توسيط أفقي */
+    gap: 20px;
+    transition: right 0.3s ease;
+    z-index: 1000;
+  }
+
+  .nav-menu.show {
+    right: 0;
+  }
+
+  .close-btn {
+    display: block;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+  }
+}
